@@ -1,5 +1,7 @@
+import { AuthGuard, PermissionGuard } from '@abp/ng.core';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BookComponent } from './book/book.component';
 
 const routes: Routes = [
   {
@@ -7,6 +9,7 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
   },
+  { path: '', component: BookComponent, canActivate: [AuthGuard, PermissionGuard] },
   {
     path: 'account',
     loadChildren: () => import('@abp/ng.account').then(m => m.AccountModule.forLazy()),
@@ -30,7 +33,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }), RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
