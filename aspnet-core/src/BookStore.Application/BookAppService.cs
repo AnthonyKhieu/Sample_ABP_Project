@@ -1,4 +1,5 @@
 ﻿using BookStore.Books;
+using BookStore.Permissions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,6 +21,11 @@ namespace BookStore
     {
         public BookAppService(IRepository<Book, Guid> repository) : base(repository)
         {
+            GetPolicyName = BookStorePermissions.Books.Default;
+            GetListPolicyName = BookStorePermissions.Books.Default;
+            CreatePolicyName = BookStorePermissions.Books.Create;
+            UpdatePolicyName = BookStorePermissions.Books.Edit;
+            DeletePolicyName = BookStorePermissions.Books.Delete;
         }
 
         
