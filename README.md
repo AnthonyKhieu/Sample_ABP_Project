@@ -19,5 +19,6 @@ This is a demo project of ABP Framework (Angular2 + .NET Core6)
    > 
    > yarn.start 
    - Render UI for project
+   Hello git
 
 For more detail in [ABP Web Development Tutorials](https://docs.abp.io/en/abp/6.0/Tutorials/Part-1?UI=NG&DB=EF)
