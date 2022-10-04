@@ -11,7 +11,7 @@ This is a demo project of ABP Framework (Angular2 + .NET Core6)
   - Folder 'aspnet-core' open => open BookStore.sln (Visual Studio 2022)
   
 ### 3. Run 'aspnet-core' with Visual Stuido 
-  > run BookStore.HttpApi.Host is set as start-up
+  > set and run BookStore.HttpApi.Host as start-up
   - Render Swagger UI for APIs document
 
 ### 4. Run 'angular' folder 
