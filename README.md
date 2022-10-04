@@ -1,7 +1,7 @@
 # BookStore
 This is a demo project of ABP Framework (Angular2 + .NET Core6)
 
-=> Read more in [Here](https://abp.io/)
+=> Check out [page](https://abp.io/)
 
 # How to run project
 ### 1. Clone project from git 
